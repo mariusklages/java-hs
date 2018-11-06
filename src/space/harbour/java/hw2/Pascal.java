@@ -1,28 +1,26 @@
 package space.harbour.java.hw2;
 
+import java.util.Scanner;
+
 public class Pascal {
-    static int factorial(int n) {
-        int f;
+    public static void main(String args[]) {
+        int r, i, k, number=1, j;
+        Scanner scan = new Scanner(System.in);
 
-        for(f = 1; n > 1; n--){
-            f *= n;
-        }
-        return f;
-    }
-    static int ncr(int n,int r) {
-        return factorial(n) / ( factorial(n-r) * factorial(r) );
-    }
-    public static void main(String args[]){
-        System.out.println();
-        int n, i, j;
-        n = 5;
+        System.out.print("Enter Number of Rows : ");
+        r = scan.nextInt();
 
-        for(i = 0; i <= n; i++) {
-            for(j = 0; j <= n-i; j++){
+        for(i=0;i<r;i++)
+        {
+            for(k=r; k>i; k--)
+            {
                 System.out.print(" ");
             }
-            for(j = 0; j <= i; j++){
-                System.out.print(" "+ncr(i, j));
+            number = 1;
+            for(j=0;j<=i;j++)
+            {
+                System.out.print(number+ " ");
+                number = number * (i - j) / (j + 1);
             }
             System.out.println();
         }
