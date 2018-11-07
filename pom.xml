@@ -5,10 +5,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Project Object Model -->
-
-    <name>HW-01</name>
-    <description>Java Programming - Homework 01</description>
-
     <developers>
         <developer>
             <name>Vasilii Artemev</name>
@@ -18,8 +14,8 @@
     <!-- All POMs extend the Super POM unless explicitly set -->
     <!--parent>*</parent-->
 
-    <groupId>harbour.space</groupId>
-    <artifactId>HW-01</artifactId>
+    <groupId>space.harbour.java.class3</groupId>
+    <artifactId>java-class</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -27,52 +23,11 @@
         <maven.compiler.source>1.9</maven.compiler.source>
         <maven.compiler.target>1.9</maven.compiler.target>
     </properties>
-
     <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.2</version>
+        </dependency>
     </dependencies>
-
-    <build>
-        <finalName>${project.name}</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>Homework1</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <id>my-maven-assembly-plugin</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <appendAssemblyId>false</appendAssemblyId>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <archive>
-                        <manifest>
-                            <mainClass>Homework1</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
