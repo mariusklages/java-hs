@@ -14,7 +14,7 @@
     <!-- All POMs extend the Super POM unless explicitly set -->
     <!--parent>*</parent-->
 
-    <groupId>space.harbour.java.class3</groupId>
+    <groupId>space.harbour.java</groupId>
     <artifactId>java-class</artifactId>
     <version>1.0</version>
 

@@ -1,34 +1,61 @@
-public class Main {
+import java.util.LinkedList;
+import java.util.Map;
 
-    public static void main(String[] args) {
-        try {
-            long i = Runtime.getRuntime().freeMemory();
-            int[] a = new int[1000];
-            for (int j = 0; j < 1000; j++) {
-                a[j] = j;
-            }
+import static java.util.Objects.hash;
 
-            System.out.println(i - Runtime.getRuntime().freeMemory());
-            System.gc();
-            Thread.sleep(10);
+//public class Main<K, V> implements Map<K, V> {
+
+    //DEFAULT_INITIAL_CAPACITY must be a power of 2
+//    static final int DEFAULT_INITIAL_CAPACITY = 16;
+  //  private LinkedList<V> table;
+    //private int size;
 
 
-            long l = Runtime.getRuntime().freeMemory();
-            Object[] o = new Object[100];
-            o[0] = new Object();
-            System.out.println(l - Runtime.getRuntime().freeMemory());
-            System.gc();
-            Thread.sleep(10);
 
-            long k = Runtime.getRuntime().freeMemory();
-            String[] s = new String[2];
-            s[0] = "abc";
-            s[1] = "xyz";
-            System.out.println(k - Runtime.getRuntime().freeMemory());
-            System.gc();;
-            Thread.sleep(10);
-        } catch (Exception e) {
+//    public int size() {
+//        return size;
+//    }
 
-        }
-    }
-}
+
+//    public V get(Object key) {
+
+//        if (key == null)
+//            return null;
+
+//        int hash = hash(key);
+//
+//        int i = hash % table.length;
+//
+//        return table[i];
+//
+//    }
+//
+//    public V put(K key, V value) {
+//
+//        if (key == null)
+//            return null;
+//
+//        int hash = hash(key);
+//
+//        int i = hash % table.length;
+//
+//        table[i] = value;
+//        size++;
+//
+//        return value;
+//        }
+//
+//
+//    public V remove(Object key) {
+//
+//
+//
+//        Entry<K,V> e = removeEntryForKey(key);
+//        return (e == null ? null : e.value);
+//        }
+//
+//    public static void main(String[] args) {
+//
+//    }
+//
+//}

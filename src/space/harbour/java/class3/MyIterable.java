@@ -3,7 +3,7 @@ package space.harbour.java.class3;
 import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
-//import org.apache.commons.collections4.CollectionUtils.*;
+import org.apache.commons.collections4.CollectionUtils.*;
 
 
 public class MyIterable<T> implements Iterable<T> {
