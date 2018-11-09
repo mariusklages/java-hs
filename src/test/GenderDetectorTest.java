@@ -1,6 +1,5 @@
-package space.harbour.java.class5;
-
 import junit.framework.TestCase;
+import space.harbour.java.class5.GenderDetector;
 
 import static org.junit.Assert.*;
 
