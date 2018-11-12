@@ -35,7 +35,7 @@ public class MyHashMap<K, V> implements Map<K, V> {
     private LinkedList<Element<K, V>>[] table;
     private Set<K> keys;
 
-    MyHashMap() {
+    public MyHashMap() {
         table = new LinkedList[DEFAULT_INITIAL_CAPACITY];
         keys = new HashSet<K>();
     }
@@ -147,10 +147,13 @@ public class MyHashMap<K, V> implements Map<K, V> {
     public static void main(String[] args) {
         MyHashMap<String, String> hashMap = new MyHashMap<>();
         hashMap.put("hossein", "yousefi");
-        hashMap.put("marius", "klages");
+        hashMap.put("MK", "klages");
+        hashMap.put(null, "Hallo");
         System.out.println(hashMap.myHash("marius"));
         System.out.println(hashMap.get("marius"));
         System.out.println(hashMap.get("hossein"));
         System.out.println(hashMap.get("timo"));
+        System.out.println(hashMap.myHash("MK"));
+        System.out.println(hashMap.containsValue("Hallo"));
     }
 }
