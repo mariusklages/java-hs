@@ -1,7 +1,7 @@
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
-import space.harbour.java.hw6.MultiThreadCrawler;
+import space.harbour.java.hw6.*;
 
 import static org.junit.Assert.*;
 
