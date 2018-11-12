@@ -1,4 +1,4 @@
-package space.harbour.java.hw6;
+package space.harbour.java.hw5;
 
 import junit.framework.TestCase;
 import org.junit.After;
