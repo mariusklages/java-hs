@@ -224,7 +224,7 @@ public class Movie implements Jsonable{
             this.actors[i].fromJson(actorsArr.getJsonObject(i).toString());
         }
 
-        this.plot = jObject.getString(plot);
+        this.plot = jObject.getString("Plot");
         this.languages = toStringArr(jObject.getJsonArray("Languages"));
         this.countries = toStringArr(jObject.getJsonArray("Countries"));
         this.awards = jObject.getString("Awards");

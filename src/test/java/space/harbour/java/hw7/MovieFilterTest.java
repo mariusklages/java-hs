@@ -15,7 +15,9 @@ public class MovieFilterTest extends TestCase {
     @Before
     public void setUp() throws Exception {
         movies = new Movie[3];
-        String[] files = {"BladeRunner.json", "Guardians.json", "Titanic.json"};
+        String[] files = {"/Users/Marius/IdeaProjects/java-harbour-test/BladeRunner.json",
+                "/Users/Marius/IdeaProjects/java-harbour-test/Guardians.json",
+                "/Users/Marius/IdeaProjects/java-harbour-test/Titanic.json"};
         for (int i = 0; i < 3; ++i)
             movies[i] = Movie.fromFile(files[i]);
     }
@@ -26,7 +28,7 @@ public class MovieFilterTest extends TestCase {
         List<String> filtered = MovieFilter.filterByDirector(movies, "James Gunn").stream()
                 .map(m -> m.title)
                 .collect(Collectors.toList());
-        assertEquals(filtered.get(0), "Guardians");
+        assertEquals(filtered.get(0), "Guardians of the Galaxy Vol. 2");
         assertEquals(filtered.size(), 1);
     }
 
@@ -45,7 +47,7 @@ public class MovieFilterTest extends TestCase {
                 .map(m -> m.title)
                 .collect(Collectors.toList());
         assertEquals(filtered.size(), 1);
-        assertTrue(filtered.contains("BladeRunner"));
+        assertTrue(filtered.contains("Blade Runner"));
     }
 }
 
