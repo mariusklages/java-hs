@@ -17,9 +17,9 @@ public class MovieSorterTest extends TestCase {
     @Before
     public void setUp() throws Exception {
         movies = new Movie[3];
-        String[] files = {"/Users/Marius/IdeaProjects/java-harbour-test/BladeRunner.json",
-                "/Users/Marius/IdeaProjects/java-harbour-test/Guardians.json",
-                "/Users/Marius/IdeaProjects/java-harbour-test/Titanic.json"};
+        String[] files = {"./BladeRunner.json",
+                "./Guardians.json",
+                "./Titanic.json"};
         for (int i = 0; i < 3; ++i)
             movies[i] = Movie.fromFile(files[i]);
     }
