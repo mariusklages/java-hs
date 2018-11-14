@@ -1,4 +1,4 @@
-package space.harbour.java.class4;
+package space.harbour.java.hw7;
 
 import javax.json.JsonObject;
 

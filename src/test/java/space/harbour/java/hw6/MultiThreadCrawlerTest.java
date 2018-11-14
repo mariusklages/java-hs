@@ -3,6 +3,7 @@ package space.harbour.java.hw6;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
+import space.harbour.java.hw7.Movie;
 
 public class MultiThreadCrawlerTest extends TestCase {
 
