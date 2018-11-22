@@ -1,0 +1,19 @@
+body {
+    background-color: powderblue;
+}
+h1 {
+    color: blue;
+}
+p {
+    color: red;
+}
+header {
+    width: 100%;
+    font-size: 32px;
+    margin-botton: 20px;
+}
+footer {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
